@@ -32,12 +32,15 @@ return [
     'project_api_key' => '<PROJECT_KEY>',
     // deploy config
     'environment' => '',
+    'revision' => '',
     'username' => '',
     'repository' => '', // change to your own, example [https://github.com/airbrake/airbrake;]
     'revision' => '', // example exec('git rev-parse HEAD'),
   ]
 ];
 ```
+
+You can add **revision** to track different versions of your application.
 
 Application.php
 
