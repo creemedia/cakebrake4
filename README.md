@@ -56,6 +56,8 @@ Load plugin in bootstrap() method before call parent::bootstrap()
 
 bootstrap.php
 
+If you are loading the environment property in your **airbrake_options.php** from another config file, load *airbrake_options* afterwards.
+
 ```
 	Configure::load('airbrake_options', 'default');
 
