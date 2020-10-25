@@ -3,6 +3,7 @@
     "description": "CakePHP-4.x Airbrake plugin",
     "homepage": "https://creemedia.com",
     "type": "cakephp-plugin",
+    "version": "1.0.1",
     "require": {
         "cakephp/cakephp": "^4.0",
         "airbrake/phpbrake": "^0.7"
