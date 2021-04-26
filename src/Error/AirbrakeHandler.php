@@ -72,4 +72,18 @@ class AirbrakeHandler extends ErrorHandler
         $this->airbrakeHandler->onException($exception);
         parent::wrapAndHandleException($exception);
     }
+    
+    public function _displayException($exception)
+    {
+        if($exception instanceof MissingControllerException){
+            $response = new Response();
+            $response = $response->withLocation(Router::url(
+                ['controller'=>'Users', 'action'=>'login'])
+            );
+            $emitter = new ResponseEmitter();
+            $emitter->emit($response);
+        }else{
+            parent::_displayException($exception);
+        }
+    }
 }
